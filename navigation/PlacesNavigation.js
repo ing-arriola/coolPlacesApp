@@ -19,3 +19,32 @@ const navOptions ={
 }
 
 const PlacesNavigator = createStackNavigator()
+
+
+
+const PlacesStackNavigator = () => {
+    return(
+        <PlacesNavigator.Navigator
+            screenOptions={navOptions}
+        >
+            <PlacesNavigator.Screen 
+                name='PlacesList'
+                component={PlacesListScreen}
+                options={placesOptions}
+            />
+            <PlacesNavigator.Screen 
+                name='PlacesDetail'
+                component={PlaceDetailScreen}
+            />
+            <PlacesNavigator.Screen 
+                name='NewPlace'
+                component={NewPlaceScreen}
+            />
+            <PlacesNavigator.Screen 
+                name='Map'
+                component={MapScreen}
+            />
+        </PlacesNavigator.Navigator>
+    )
+}
+
