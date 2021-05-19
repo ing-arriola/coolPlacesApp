@@ -48,3 +48,10 @@ const PlacesStackNavigator = () => {
     )
 }
 
+const PlacesNavigation = (props) => {
+    return <NavigationContainer>
+        <PlacesStackNavigator/>
+    </NavigationContainer>
+}
+
+export default PlacesNavigation
